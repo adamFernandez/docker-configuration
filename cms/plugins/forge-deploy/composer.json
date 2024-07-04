@@ -1,0 +1,48 @@
+{
+  "name": "wl/craft-forge-deploy",
+  "description": "Runs a deployment on configured forge account's domain",
+  "type": "craft-plugin",
+  "license": "mit",
+  "support": {
+    "email": "alejandro@wiedemannlampe.com",
+    "issues": "https://github.com/https://bitbucket.org/wiedemannlampeprojects/forge-deploy/src/master//issues?state=open",
+    "source": "https://github.com/https://bitbucket.org/wiedemannlampeprojects/forge-deploy/src/master/",
+    "docs": "https://github.com/https://bitbucket.org/wiedemannlampeprojects/forge-deploy/src/master/",
+    "rss": "https://github.com/https://bitbucket.org/wiedemannlampeprojects/forge-deploy/src/master//releases.atom"
+  },
+  "require": {
+    "php": ">=8.0.2",
+    "craftcms/cms": "^4.5.0"
+  },
+  "require-dev": {
+    "craftcms/ecs": "dev-main",
+    "craftcms/phpstan": "dev-main"
+  },
+  "autoload": {
+    "psr-4": {
+      "wl\\craftforgedeploy\\": "src/"
+    }
+  },
+  "extra": {
+    "handle": "forge-deploy",
+    "name": "Forge Deploy",
+    "developer": "wl",
+    "documentationUrl": "https://github.com/https://bitbucket.org/wiedemannlampeprojects/forge-deploy/src/master/",
+    "class": "wl\\craftforgedeploy\\ForgeDeploy"
+  },
+  "scripts": {
+    "check-cs": "ecs check --ansi",
+    "fix-cs": "ecs check --ansi --fix",
+    "phpstan": "phpstan --memory-limit=1G"
+  },
+  "config": {
+    "sort-packages": true,
+    "platform": {
+      "php": "8.0.2"
+    },
+    "allow-plugins": {
+      "yiisoft/yii2-composer": true,
+      "craftcms/plugin-installer": true
+    }
+  }
+}

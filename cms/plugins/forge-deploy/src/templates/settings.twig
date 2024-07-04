@@ -1,0 +1,47 @@
+{% set pages = [] %}
+{% import '_includes/forms.twig' as forms %}
+
+	<form method="post"> 
+    {{ csrfInput() }}
+    {{ actionInput('forge-deploy/deployment/deploy') }}
+
+    {{ forms.lightswitchField({
+      label: 'Enabled',
+      name: 'forgeDeployEnabled',
+      on: settings.forgeDeployEnabled,
+      first: true,
+    })}}
+
+    {{ forms.autosuggestField({
+      label: 'Laravel Forge Auth'|t('forge-deploy'),
+      id: 'forge-auth',
+      name: 'forgeAuth',
+      value: settings.forgeAuth,
+      suggestEnvVars: true
+    }) }}
+
+    {{ forms.autosuggestField({
+      label: 'Server Id'|t('forge-deploy'),
+      id: 'server-id',
+      name: 'serverId',
+      value: settings.serverId,
+      suggestEnvVars: true
+    }) }}
+
+    {{ forms.autosuggestField({
+      label: 'Site Id'|t('forge-deploy'),
+      id: 'site-id',
+      name: 'siteId',
+      value: settings.siteId,
+      suggestEnvVars: true
+    }) }}
+
+    {{ forms.autosuggestField({
+      label: 'Site Domain'|t('forge-deploy'),
+      id: 'site-domain',
+      name: 'siteDomain',
+      value: settings.siteDomain,
+      suggestEnvVars: true
+    }) }}
+
+  </form>

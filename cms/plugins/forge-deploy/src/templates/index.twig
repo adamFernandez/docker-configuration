@@ -1,0 +1,33 @@
+{% extends "_layouts/cp" %}
+{% import '_includes/forms.twig' as forms %}
+{% set title = "Forge Deploy"|t('forge-deploy') %}
+
+{% set tabs = {
+	deployment: { label: 'Deployment', url: '#deployment'},
+	logs: { label: 'Logs', url: '#logs' },
+}%}
+
+{% block content %}
+
+	<div id="deployment">
+
+		<h2>{{ 'Deploy to Laravel Forge'|t('forge-deploy') }}</h2>
+		<p>{{ 'Deploy your latest cms changes to Laravel Forge to update the live site.'|t('forge-deploy') }}</p>
+
+		{# <hr> #}
+		<form method="post">
+			{{ csrfInput() }}
+			{{ actionInput('forge-deploy/deployment/deploy') }}
+
+			{{ forms.submitButton({
+						label: 'Deploy',
+						spinner: true,
+					}) }}
+		</form>
+	</div>
+
+	<div id="logs" class="hidden">
+		<h2>{{ 'Deployment Logs'|t('forge-deploy') }}</h2>
+	</div>
+
+{% endblock %}
