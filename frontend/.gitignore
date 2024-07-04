@@ -30,4 +30,4 @@ logs
 # Docker
 Dockerfile
 
-.npmrc
+# .npmrc
