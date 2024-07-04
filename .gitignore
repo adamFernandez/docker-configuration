@@ -1,0 +1,54 @@
+# build output
+dist/
+
+# generated types
+.astro/
+
+# dependencies
+node_modules/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# environment variables
+.env
+.env.production
+
+# macOS-specific files
+.DS_Store
+
+clean-db/
+db-sources/*
+db-data/
+data/
+db-data/logs/*.*
+backups/*
+tmp/
+
+# docker-compose.dev.yml
+docker-compose.dev-front.yml
+docker-compose.yml
+.my*.cnf
+exclude.txt
+# Makefile
+
+update-server.sh
+
+.db-scripts/
+clean-db/*/
+
+# docker-config/
+# db-seed/
+# config-files/
+
+# Initial basic pnpm installation folder
+f-pnpm
+
+# Test directory
+testing
+
+.env
+example.env
