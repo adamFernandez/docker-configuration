@@ -31,7 +31,7 @@ tmp/
 # docker-compose.dev.yml
 docker-compose.dev-front.yml
 docker-compose.yml
-.my*.cnf
+# .my*.cnf
 exclude.txt
 # Makefile
 
@@ -51,4 +51,4 @@ f-pnpm
 testing
 
 .env
-example.env
+# example.env
